@@ -6,7 +6,7 @@ This project's goal is to identify hummingbirds when they show up on a camera fe
 
 # Setup
 
-Initially this was going to be set up on a Jetson Nano, initially running Jetpack 4.3.6. I have since migrated to using a Jetson Xaier running Jetpack 5.0.2. The following instructions and commands are helpful for updating Jetpack.
+Initially this was going to be set up on a Jetson Nano, initially running Jetpack 4.3.6. I have since migrated to using a Jetson Xavier running Jetpack 5.0.2. The following instructions and commands are helpful for updating Jetpack.
 In order to update all parts of the Jetpack SDK to the latest supported on Nano, which is 4.6.1. This version includes Linux version 32.7.3.
 
 To check jetpack version type:
@@ -35,3 +35,10 @@ The second phase of the project is to integrate the classifier with a livestream
 The third phase of the project is to gather custom data for object detection and train an object detection model, working with the live RTSP feed.
 
 The fourth phase of the project is to create an alert system or GUI to interact with the output of the detection.
+
+# Instructions (to expand)
+
+Clone the jetson-inference repo
+Run the docker image
+Download the dataset
+Train the model
