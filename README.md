@@ -39,6 +39,9 @@ The fourth phase of the project is to create an alert system or GUI to interact 
 # Instructions (to expand)
 
 Clone the jetson-inference repo
+
 Run the docker image
+
 Download the dataset
+
 Train the model
