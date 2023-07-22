@@ -5,6 +5,12 @@ This project's goal is to identify hummingbirds when they show up on a camera fe
 ![Screenshot](HummingbirdDetectorBlock.jpg)
 
 # Table of Contents
+* [Jetson Setup](#jetson-setup)
+* [Project Iterations](#project-iterations)
+* [Work Environment Setup](#work-environment-setup)
+  * [VNC Setup](#vnc-setup)
+  * [VLC Viewer Setup](#vlc-viewer-setup)
+* [Instructions](#instructions)
 
 # Jetson Setup
 
