@@ -140,11 +140,18 @@ The jetson-inference project supports multiple media streaming and capturing pro
 
 I primarily used RTSP streaming as I had a V4L2 USB camera. To start transmitting the feed, use `rtsp://@:1234/my_output` as the output option for whatever command is being run (e.g. video-viewer, imagenet, detectnet, etc.). For example, to simply begin streaming the camera feed over RTSP, use the following command:
 ```
-video-viewer rtsp://@:1234/my_output
+video-viewer /dev/video0 rtsp://@:1234/my_output
 ```
+This will output the camera feed from the camera at `/dev/video0` to the RTSP feed `rtsp://@:1234/my_output`.
 You can also change the port number or URL to your own specification, or if you have multiple streams.
 
 Then, access the feed through a program such as VLC Media Player, which has the capability to subscribe to network streams. Within VLC, select "Media-> Open Network Stream" and enter the URL of the stream you would like to view in the format `rtsp://<remote-ip>:1234/my_output`.
+
+Similarly, `rtsp://<remote-ip>:1234/my_output` can be used to subscribe to another network stream and use it as an input to any of the jetson-inference commands.
+For example, the following command will subscribe to the RTSP feed from <remote-ip> at port 1234 and save it to the file `my_video.mp4`:
+```
+video-viewer rtsp://<remote-ip>:1234 my_video.mp4
+```
 
 
 # Instructions
