@@ -28,8 +28,10 @@ dpkg-query --show nvidia-l4t-core
 ```
 
 To update jetpack, follow the following steps:
+
+First, edit `etc/apt/sources.list.d/nvidia-l4t-apt-source.list` to point to the desired repo using your preferred editor (just change the version to r35.1 in both lines)
+Then run:
 ```
-edit etc/apt/sources.list.d/nvidia-l4t-apt-source.list to point to the desired repo (just change the version to r35.1 in both lines)
 sudo apt update
 sudo apt dist-upgrade
 ```
