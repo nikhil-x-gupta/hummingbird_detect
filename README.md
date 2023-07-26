@@ -46,7 +46,7 @@ The third phase of the project is to gather custom data for object detection and
 
 The fourth phase of the project is to create an alert system or GUI to interact with the output of the detection.
 
-# Work Environment Setup
+# [Work Environment Setup](work-env-setup.md)
 ## VNC Setup
 In order to work remotely, one of the tools I used was VNC. I chose VNC as a result of issues I had with X11 forwarding built into the Hello AI World system. VNC also enabled me to view and access photos and videos from Xavier. I used Xfce and TightVNC since they are lightweight and fast, ensuring the VNC connection is smooth and stable. I followed [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04) for the installation and setup.
 
