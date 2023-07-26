@@ -9,7 +9,7 @@ This project's goal is to identify hummingbirds when they show up on a camera fe
 * [Project Iterations](#project-iterations)
 * [Work Environment Setup](#work-environment-setup)
   * [VNC Setup](#vnc-setup)
-  * [VLC Viewer Setup](#vlc-viewer-setup)
+  * [Media Streaming Setup](#media-streaming-setup)
 * [Instructions](#instructions)
 
 # Jetson Setup
@@ -133,9 +133,20 @@ Once the SSH tunnel is running, open up a VNC client (I downloaded the TightVNC 
 Press `Ctrl-C` in the local terminal to stop the SSH tunnel, which will disconnect your VNC session as well.
 
 
-## VLC Viewer Setup
+## Media Streaming Setup
+The jetson-inference project supports multiple media streaming and capturing protocols for video and static images. For the full list, see [this page](https://github.com/nikhil-x-gupta/jetson-inference/blob/master/docs/aux-streaming.md).
 
-# Instructions (to expand)
+I primarily used RTSP streaming as I had a V4L2 USB camera. To start transmitting the feed, use `rtsp://@:1234/my_output` as the output option for whatever command is being run (e.g. video-viewer, imagenet, detectnet, etc.). For example, to simply begin streaming the camera feed over RTSP, use the following command:
+```
+video-viewer rtsp://@:1234/my_output
+```
+You can also change the port number or URL to your own specification, or if you have multiple streams.
+
+Then, access the feed through a program such as VLC Media Player, which has the capability to subscribe to network streams. Within VLC, select "Media-> Open Network Stream" and enter the URL of the stream you would like to view in the format `rtsp://<remote-ip>:1234/my_output`.
+
+
+# Instructions
+__UNDER CONSTRUCTION__
 
 Clone the jetson-inference repo
 
